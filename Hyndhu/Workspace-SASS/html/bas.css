@@ -1,0 +1,17 @@
+h1 {
+  color: red;
+  font-size: 40px;
+}
+
+body {
+  background-color: cyan;
+}
+
+body #p1 {
+  color: #ff420e;
+  font-family: "franklin gothic medium";
+  font-size: 24px;
+  font-style: bold;
+  color: red;
+}
+/*# sourceMappingURL=bas.css.map */

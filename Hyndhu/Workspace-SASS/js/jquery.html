@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <input type="text" id="blur">
+    <h1>Header</h1>
+    <ul>
+        <li id="1"><a href="link1.html" id="a">link1</a></li>
+        <li id="2"><a href="link2.html">link2</a></li>
+        <li id="3"><a href="link3.html">link3</a></li>
+    </ul>
+    <img src="../html/1.png" alt="" id="img1">
+    <img src="../html/1.png" alt="" id="img2">
+    <img src="../html/1.png" alt="" id="img3">
+    <script>
+        $("ul").css({ "display": "flex" });
+        $("li #a").css({ "text-decoration": "none", "color": "pink", "font-size": "24px" });
+        $("p").mouseenter(function () {
+            $(this).css({
+                "font-size": "24px", color: "blue"
+            });
+        });
+        $("p").mouseleave(function () {
+            $(this).css({
+                "font-size": "24px",
+                color: "black"
+            });
+        })
+        $("button").click(function () {
+            $("p").fadeout();
+        });
+        $("img").click(function () {
+            $("img").fadeIn();
+        });
+        $("button").click(function () {
+            $("p").hide();
+        });
+        $("input").focus(function () {
+            $(this).css({
+                backgroundColor: "cyan"
+            });
+        });
+        $("input").blur(function () {
+            $(this).css({
+                backgroundColor: "pink"
+            });
+        });
+        $("#img3").css("border-radius", "50%");
+    </script>
+</body>
+
+</html>

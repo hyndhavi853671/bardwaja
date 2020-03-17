@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+  </head>
+  <body>
+      <center>
+    
+      <h3 class="text-primary">Currency Converter</h3>
+        <div class="form-group">
+          <select
+            onchange="Currency(); Calculate()"
+            class="form-control"
+            id="converter"
+            style="width:30%;"
+          >
+            <option value="CAD">CAD</option>
+            <option value="INR">INR</option>
+            <option value="JPY">JPY</option>
+            <option value="USD">USD</option>
+          </select>
+          <br />
+          <input
+            type="number"
+            oninput="Calculate()"
+            class="form-control"
+            id="value1"
+          />
+        </div>
+        <br /><br />
+        <div class="form-group">
+          <label
+            ><select name="" id="">
+              <option value="CAD">CAD</option>
+              <option value="INR">INR</option>
+              <option value="JPY">JPY</option>
+              <option value="USD">USD</option>
+            </select></label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="value2"
+            disabled="disabled"
+          />
+        </div>
+      </div>
+    </div>
+</center>
+  </body>
+  <script>
+    function Currency() {
+      y = document.getElementById("converter").value;
+      return y;
+    }
+
+    function Calculate() {
+      y = Currency();
+
+      x = document.getElementById("value1").value;
+
+      if (x == "") {
+        document.getElementById("value2").value = "";
+      } else {
+        switch (y) {
+          case "CAD":
+            document.getElementById("value2").value = x * 51.89;
+            break;
+
+          case "INR":
+            document.getElementById("value2").value = x * 72.39;
+            break;
+
+          case "USD":
+            document.getElementById("value2").value = x * 63.84;
+            break;
+
+          case "JPY":
+            document.getElementById("value2").value = x * 0.49;
+            break;
+        }
+      }
+    }
+  </script>
+</html>

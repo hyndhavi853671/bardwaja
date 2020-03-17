@@ -1,0 +1,20 @@
+$text-color:red;
+$text-size:40px;
+h1{
+    color: $text-color;
+    font-size: $text-size;
+}
+$colors:(
+    petal: #f98866,
+    poppy: #ff420e,
+);
+@mixin text-prop {
+    font-family: "franklin gothic medium";
+    font-size: 24px;
+    font-style: bold;background-color: cyan;
+    #p1{
+        color:map-get( $colors, poppy);
+        @include text-prop;
+        color: $text-color;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>unordered list</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            border: seagreen;
+            /*margin: 2px 2px 2px 2px;*/
+            width: 80px;
+            list-style-type: none;
+            /*cursor: pointer;*/
+            list-style: none;
+            background-color: grey;
+
+
+        }
+
+        li:hover {
+            background-color: seagreen;
+        }
+
+        #one {
+            border-top: 5px solid seagreen;
+            border-left: 5px solid seagreen;
+            border-right: 5px solid seagreen;
+            border-bottom: 5px solid greenyellow;
+            background-color: grey;
+        }
+
+        #two {
+            border-left: 5px solid seagreen;
+            border-right: 5px solid seagreen;
+            border-bottom: 5px solid black;
+        }
+
+        #three {
+            border-bottom: 5px solid rgb(231, 13, 86);
+            border-right: 5px solid seagreen;
+            border-left: 5px solid seagreen;
+        }
+
+        #four {
+            border-bottom: 5px dotted seagreen;
+            border-left: 5px solid seagreen;
+            border-right: 5px solid seagreen;
+
+        }
+
+        li:nth-of-type(even) {
+            background-color: silver;
+        }
+
+        a {
+            text-decoration: none;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li id="one"><a href="home.html">Home</a></li>
+        <li id="two"><a href="Courses.html">Courses</a></li>
+        <li id="three"><a href="Login.html">Login</a></li>
+        <li id="four"><a href="Register">Register</a></li>
+    </ul>
+</body>
+
+</html>

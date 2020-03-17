@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,EAAE,CAAA;EACE,KAAK,EAHG,GAAG;EAIX,SAAS,EAHF,IAAI;CAId",
+    "sources": [
+        "bas.scss"
+    ],
+    "names": [],
+    "file": "bas.css"
+}

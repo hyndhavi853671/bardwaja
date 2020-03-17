@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Loan Request</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container  col-md-6 m-auto">
+        <form onsubmit="myFunction()">
+            <div class="form my-5" style=" width: 70%; border-style:groove; margin: auto;">
+
+                <h2 class="text-capitalize text-center" style="color: rgb(255, 0, 0);">Loan Request Form</h2>
+
+
+                <div class="fname pt-2 px-4">
+                    <label for="uname">Full Name:&nbsp;</label>
+                    <input type="text" class="form-control" name="fname" placeholder="Full name" required>
+                </div>
+
+                <div class="phone pt-2 px-4">
+                    <label for="phone">Mobile:&nbsp;</label>
+                    <input type="text" class="form-control" name="phone" placeholder="Mobile number" required>
+                </div>
+
+                <div class="pan pt-2 px-4">
+                    <label for="pan">Pan Card Number:&nbsp;</label>
+                    <input type="text" class="form-control" name="phone" placeholder="Pan-Card number" required>
+                </div>
+
+                <div class="amount input-group pt-2 px-4">
+
+                    <label for="amount" class="m-auto">Required Loan Amount:&nbsp;</label>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="tenure input-group pt-2  px-4">
+                    <label for="tenure" class="m-auto ">Tenure:&nbsp;</label>
+                    <input type="text" class="form-control">
+                    <div class="input-group-append">
+                        <span class="input-group-text">Years</span>
+                    </div>
+                </div>
+
+                <div class="Purpose input-group py-2 px-4">
+                    <label for="purpose">Purpose:&nbsp;</label>
+
+                    <textarea class="form-control  w-100" aria-label="With textarea"
+                        placeholder="Reason For Opting Loan" required></textarea>
+
+                </div>
+
+                <div class="submit pt-2 pb-2 px-4">
+                    <button class="btn btn-danger btn-md btn-block text-capitalize"
+                        style="font-size: 20px;">Submit</button>
+                </div>
+        </form>
+    </div>
+    <script>
+        function myFunction() {
+            alert("Request is submitted successfully");
+        }
+    </script>
+</body>
+
+</html>

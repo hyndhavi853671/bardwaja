@@ -1,0 +1,123 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>CURRENCY CONVERTER</h1>
+      <input type="text/number" id="amount" /><br />
+      <select name="" id="country1" >
+         <option id="usd">USD</option>
+        <option id="inr">INR</option>
+        <option id="cad">CAD</option>
+        <option id="jpy">JPY</option>
+      </select>
+      <select id="country2">
+          <option value="" id="usd">USD</option>
+          <OPtion id="inr">INR</OPtion>
+          <OPtion id="cad">CAD</OPtion>
+          <OPtion id="jpy">JPY</OPtion>
+      </select><br /><BR></BR>
+      <button id="submit" onclick="Calculate()">submit</button>
+    </center>-->
+    <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+		<script src="converter.js"></script>
+	</head>
+<body>
+	<div class="col-md-3"></div>
+	<div class="col-md-6 well">
+		<h3 class="text-primary">Javascript - Simple Currency Converter</h3>
+		<hr style="border-top:1px dotted #ccc;">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<h4>Converter</h4>
+			<hr style="border-top:1px groovy #ccc;"/>
+			<div class="form-group">
+				<select onchange="Currency(); Calculate()" class="form-control" id="converter" style="width:30%;">
+					<option value="Dollar">USD</option>
+					<option value="Pound">CAD</option>
+					<option value="Euro">JPY</option>
+					<option value="Yen">INR</option>
+				</select>
+				<br />
+				<input type="number" oninput="Calculate()" class="form-control" id="value1"/>
+			</div>
+			<br /><br />
+			<div class="form-group">
+                <select onchange="Currency(); Calculate()" class="form-control" id="converter" style="width:30%;">
+					<option value="Dollar">USD</option>
+					<option value="Pound">CAD</option>
+					<option value="Euro">JPY</option>
+					<option value="Yen">INR</option>
+				</select>
+				<input type="" class="form-control" id="value2"/>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+    <script>
+          var USD=[CAD=1.3443563815,INR=72.228295527,JPY=108.7364489387];
+          var INR=[CAD=0.0186126001,JPY=1.5054550041,USD=0.0138449896];
+          var CAD=[CAD=1.0,INR=53.7270447923,USD=0.7438503761];
+          var JPY=[CAD=0.0123634383,INR=0.6642510054,USD=0.0091965483];
+          function convert() {
+		y = document.getElementById("converter").value;
+		return y;
+	}
+ 
+function Calculate(){
+	y = convert();
+ 
+	x = document.getElementById("value1").value;
+ 
+	if(x == ""){
+		document.getElementById("value2").value = "";
+	}else{
+		switch(y){
+			case "USD":
+				document.getElementById("value2").value = x * 51.89;
+			break;
+ 
+			case "CAD":
+				document.getElementById("value2").value = x * 72.39;
+			break;
+ 
+			case "JPY":
+				document.getElementById("value2").value = x * 63.84;
+			break;
+ 
+			case "INR":
+				document.getElementById("value2").value = x * 0.49;
+			break;
+ 
+			//case "Yuan":
+				//document.getElementById("value2").value = x * 8.20;
+			//break;
+		}
+	}
+}
+              //if(country1.usd.USD[0]==country2.usd.USD[0]){
+                   // console.log(arr.map(num => num * USD[0])
+              //}
+              /*if(country1.USD==country2.INR){
+                            return amount*USD[1];
+                        }
+            if(country1.USD==country2.JPY)
+                      {
+                     return amount*USD[2];
+                     }
+                     if(country1.USD==country2.CAD){
+                         return amount*USD[0];
+                     }
+              }*/
+    </script>
+  </body>
+</html>

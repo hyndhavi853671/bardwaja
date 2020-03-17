@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .col-lg-3 {
+            float: left;
+            padding-left: 5%;
+        }
+
+        .col1 {
+            padding: 2px;
+            padding-top: 10%;
+            align-content: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3" id="col1" align="center">
+                <img src="../html/download.png" alt="not available" id="img">
+            </div>
+            <div class="col-lg-3" align="center">
+                <h1>fittness</h1>
+            </div>
+            <center>
+                <div class="col-lg-3">
+                    <h1>price</h1><br>
+                    <button>2000</button>
+                </div>
+            </center>
+            <div class="col-lg-3" align="center">
+                <h1>Quantity</h1>
+                <input type="number" value="number" placeholder="quantity">
+                <input type="button" value="+" onclick="inc()">
+                <input type="button" value="-" onclick="dec()">
+            </div>
+            <div class="col-lg-3" align="center">
+                <h1>Total price</h1>
+                <input type="text" name="" id="">
+                <input type="button" onclick="totalcal()" value="calculate">
+            </div>
+        </div>
+    </div>
+    <script>
+        function totalcal() {
+            console.log(arr.map(num => num * i));
+        }
+        function inc() {
+            var value = parseInt(document.getElementById('number').value, 23);
+            value = isNaN(value) ? 0 : value;
+            if (value < 23) {
+                value++;
+                document.getElementById('number').value = value;
+            }
+        }
+        function dec() {
+            var value = parseInt(document.getElementById('number').value, 23);
+            value = isNaN(value) ? 0 : value;
+            if (value < 23) {
+                value--;
+                document.getElementById('number').value = value;
+            }
+        }
+    </script>
+</body>
+
+</html>

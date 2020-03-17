@@ -1,0 +1,103 @@
+.col-lg-3{
+    background-color: lightblue;
+    padding-left: 30px;
+}
+.col-lg-9{
+    padding-top: 2%;  
+    padding-right: 3%;
+}
+.card3{
+    background-color: grey;
+    padding-right: 50px;
+}
+.card2{
+    background-color: hotpink;
+    padding-right: 50px;
+}
+.card1{
+    background-color: lightblue;
+    padding-right: 50px;
+}
+.in1{
+    background-color: rgb(37, 34, 34);
+}
+.in2{
+    background-color: grey;
+}
+button{
+    width: 40%;
+    height: 10%;
+    background-color: gray;
+}
+.d{
+    background-color: rgb(110, 110, 179) ;
+}
+.btn{
+    height: 10px;
+    width: 10px;
+}
+/*
+body{
+    #sea{
+        background-color: lightgreen;
+        color: white;
+        border: darkcyan;
+        width: 50px;
+        height:40px;
+    }
+    a{
+        text-decoration: none;
+        color: darkgreen
+    }
+    hr{
+        border: 1px solid grey;
+       
+    }
+    .col-md-4{
+        background-color: pink;
+        padding-left: 60px;       
+    }
+    h1{
+      
+        color: darkgreen;
+    }
+    ul{
+        color: darkgreen;
+    }
+    #jumbo{
+        background-color: lightblue;
+    }
+    .card{
+        background-color: aqua;
+    }
+    img{
+        width: 284px;
+        height: 180px;
+    }*/
+    .col-md-2 {
+        
+        height: 150px;
+        width: 150px;
+        background-color:orange;
+        margin-top: 1cm;
+        
+      }
+      #circle {
+        height: 150px;
+        width: 150px;
+        background-color: grey;
+        border-radius: 50%;
+        
+      }
+      #triangle{
+        width: 0;
+        height: 0;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-bottom: 200px solid red;
+       
+      }
+      .btn1{
+          width: 30px;
+          height: 30px;
+      }

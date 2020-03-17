@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,EAAE,CAAA;EACE,KAAK,EAHG,GAAG;EAIX,SAAS,EAHF,IAAI;CAId;;AAWD,AAAA,IAAI,CAAA;EACA,gBAAgB,EAAE,IAAI;CAMzB;;AAPD,AAEI,IAFA,CAEA,GAAG,CAAA;EACC,KAAK,EAXF,OAAO;EAGd,WAAW,EAAE,wBAAwB;EACrC,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,IAAI;EAQZ,KAAK,EArBD,GAAG;CAsBV",
+    "sources": [
+        "bas.scss"
+    ],
+    "names": [],
+    "file": "bas.css"
+}
