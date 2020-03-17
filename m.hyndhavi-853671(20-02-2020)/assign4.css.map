@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,MAAM,EAAE,GAAG;EACX,aAAa,EAAE,IAAI;CACtB;;AACD,AAAA,KAAK,CAAA;EACD,MAAM,EAAE,GAAG;EACX,KAAK,EAAE,GAAG;CACb;;AACD,AAAA,KAAK,CAAA;EACD,MAAM,EAAE,GAAG;EACX,KAAK,EAAE,GAAG;CACb;;AACD,AAAA,KAAK,CAAA;EACD,MAAM,EAAE,GAAG;EACX,KAAK,EAAE,GAAG;CACb",
+    "sources": [
+        "assign4.scss"
+    ],
+    "names": [],
+    "file": "assign4.css"
+}

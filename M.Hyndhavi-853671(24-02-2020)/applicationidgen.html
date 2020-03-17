@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generation</title>
+</head>
+
+<body>
+    APP-ID:<input type="text" name="randomPassword" id="random">
+    <button id="generate">Generate AppId</button>
+    <p id="p1"></p>
+    <script type="text/javascript">
+
+
+        function random_password_generate() {
+            var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            var string_length = 12;
+            var randomstring = '';
+            for (var i = 0; i < string_length; i++) {
+                var rnum = Math.floor(Math.random() * chars.length);
+                randomstring += chars.substring(rnum, rnum + 1);
+            }
+            return randomstring;
+        }
+        //document.getElementById("p1").innerHTML = randomstring;
+        document.getElementById("generate").addEventListener("click", function () {
+            random_password = random_password_generate();
+            document.getElementById("random").value = random_password;
+        }); 
+    </script>
+
+</body>
+
+</html>

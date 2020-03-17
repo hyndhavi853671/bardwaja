@@ -1,0 +1,360 @@
+{/*import React, { Component } from "react";
+import TodosTable from "./todos-table";
+import { toast } from "react-toastify";
+import axios from "axios";
+//import httpService from "../../../reactapp/src/services/httpService";
+const baseUrl = "https://jsonplaceholder.typicode.com";
+class Todos extends Component {
+  constructor() {
+    super();
+  }
+  state = {
+    list: []
+  };
+  completed = () => {
+    const li = this.state.list.filter(lii => lii.id === true);
+    this.setState({ list: li[0] });
+  };
+  addPost = () => {};
+  getPost = id => {
+    const lis = this.state.list.filter(l2 => l2.id === id);
+    this.setState({ list: lis[0] });
+  };
+  deletePost = async l => {
+    const orginalPosts = this.state.list;
+    const li3 = this.state.list.filter(ll => ll.id !== l.id);
+    console.log(l);
+    this.setState({ li3 });
+    try {
+      await axios.delete(baseUrl + "/todos" + l.id);
+    } catch (err) {
+      console.log("error:" + err);
+      if (err.response && err.response.status === 200) {
+        toast("post has been deleted");
+      } else {
+        toast("Failed to delete due to unknow error");
+        this.setState({ list: orginalPosts });
+      }
+    }
+  };
+  UpdatePost = async list => {
+    list.title = "New title";
+    const response = axios.put(baseUrl + "/todos" + list.id, list);
+    console.log(response);
+    const list1 = this.state.list;
+    const indx = this.state.list.indexOf(list1);
+    const lists = this.state.list;
+    lists[indx] = (await response).data;
+    this.setState({ lists });
+  };
+  async componentDidMount() {
+    console.log("inside componentDidMount");
+    const promise = await axios.get(baseUrl + "/todos");
+    console.log(promise);
+    this.setState({ list: promise.data });
+  }
+  render() {
+    return (
+      <div>
+        <TodosTable
+          tlist={this.state.list}
+          getPost={this.getPost}
+          UpdatePost={this.UpdatePost}
+          deletePost={this.deletePost}
+          addPost={this.addPost}
+          completed={this.completed}
+        />
+      </div>
+    );
+  }
+}
+export default Todos;*/}
+************************TODOS.JSX*********************
+
+{/*import React from "react";
+import Todos from "./todos";
+import Input from "./input";
+const TodosTable = props => {
+  const { tlist, handleInputField, list, addPost, completed } = props;
+  return (
+    <div>
+      <button className="btn btn-primary" onClick={() => addPost()}>
+        create
+      </button>
+      <button className="btn btn-success" onClick={() => completed()}>
+        completed
+      </button>
+      <button className="btn btn-danger">pending</button>
+      <table className="table">
+        <thead className="table-success">
+          <tr>
+            <th>USERID</th>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>COMPLETED</th>
+            <th>ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tlist.map(l1 => (
+            <tr>
+              <td>{l1.userId}</td>
+              <td>{l1.id}</td>
+              <td>{l1.title}</td>
+              <td>{l1.completed.toString()}</td>
+              <td>
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#exampleModalCenter"
+                  onClick={() => props.getPost(l1.id)}
+                >
+                  Update
+                </button>
+                <button
+                  className="btn btn-danger"
+                  onClick={() => props.deletePost(l1)}
+                >
+                  delete
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+export default TodosTable;*/}
+**************************TODOS-TABLE**********************************
+{/*import React from "react";
+import Input from "./input";
+const UpdateTodo = props => {
+  // const employee={this.employee};
+  return (
+    <div>
+      <form onSubmit={props.UpdateTodo} className="w-50 mt-5  mx-auto">
+        <div className="form-group">
+          <Input
+            inputName="empId"
+            value={props.employee.empId}
+            type="number"
+            handleInputField={props.handleInputField}
+            label="Emp ID"
+          />
+        </div>
+        <div className="form-group">
+          <Input
+            inputName="empName"
+            value={props.employee.empName}
+            type="text"
+            handleInputField={props.handleInputField}
+            label="Emp Name"
+          />
+        </div>
+        <div className="form-group">
+          <Input
+            inputName="empEmail"
+            value={props.employee.empEmail}
+            type="email"
+            handleInputField={props.handleInputField}
+            label="Emp Email"
+          />
+        </div>
+        <div className="form-group">
+          <Input
+            inputName="empDept"
+            value={props.employee.empDept}
+            type="text"
+            handleInputField={props.handleInputField}
+            label="Emp Dept"
+          />
+        </div>
+        <button className="btn btn-block btn-outline-warning btn-secondary">
+          Submit
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default UpdateTodo;
+******************************TODOUPDATE***************************
+
+import React from "react";
+import Input from "./input";
+const Registeration = ({
+  firstname,
+  lastname,
+  email,
+  password,
+  handleInputField
+}) => {
+  return (
+    <div>
+      <form className="w-50 mt-5  mx-auto">
+        <p className="h3 bg-light text-white text-center"></p>
+        <div>
+          <Input
+            inputName="firstname"
+            value={firstname}
+            type="text"
+            handleInputField={handleInputField}
+            label="firstname"
+          />
+        </div>
+        <div>
+          <Input
+            inputName="firstname"
+            value={lastname}
+            type="text"
+            handleInputField={handleInputField}
+            label="lastname"
+          />
+        </div>
+        <div>
+          <Input
+            inputName="email"
+            value={email}
+            type="email"
+            handleInputField={handleInputField}
+            label="email"
+          />
+        </div>
+        <div>
+          <Input
+            inputName="password"
+            value={password}
+            type="password"
+            handleInputField={handleInputField}
+            label="password"
+          />
+        </div>
+        <button className="btn btn-block btn-outline-dark">Submit</button>
+      </form>
+    </div>
+  );
+};
+export default Registeration;
+********************************REGISTERATION**************************
+
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+const NavBar = props => {
+  return (
+    <div>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <NavLink className="navbar-brand" to="/">
+          Navbar
+        </NavLink>
+
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li className="nav-item active">
+              {props.isLoggedIn && (
+                <NavLink className="nav-link" to="/">
+                  Home <span className="sr-only">(current)</span>
+                </NavLink>
+              )}
+            </li>
+            <li className="nav-item">
+              {props.isLoggedIn && (
+                <NavLink className="nav-link" to="/todos">
+                  Todos
+                </NavLink>
+              )}
+            </li>
+          </ul>
+          <form className="form-inline my-2 my-lg-0">
+            {!props.isLoggedIn && (
+              <NavLink
+                className="nav-link"
+                to="/login"
+                tabindex="-1"
+                aria-disabled="true"
+              >
+                Login
+              </NavLink>
+            )}
+            {props.isLoggedIn && (
+              <NavLink
+                className="nav-link"
+                to="/logout"
+                tabindex="-1"
+                aria-disabled="true"
+              >
+                Logout
+              </NavLink>
+            )}
+            {!props.isLoggedIn && (
+              <NavLink
+                className="nav-link"
+                to="/register"
+                tabindex="-1"
+                aria-disabled="true"
+              >
+                Register
+              </NavLink>
+            )}
+          </form>
+        </div>
+      </nav>
+    </div>
+  );
+};
+
+export default NavBar;
+*************************NAVBAR******************************
+
+import React from "react";
+import { Link } from "react-router-dom";
+const Logout = () => {
+  return (
+    <div clas="text-center">
+      <h1>you have been logged out successfully</h1>
+      <p className="small">
+        click<Link to="/login">here</Link>to login again
+      </p>
+    </div>
+  );
+};
+export default Logout;
+*****************LOGOUT**************
+
+{/*import React, { Component } from "react";
+const Input = ({ inputName, value, type, handleInputField, label, error }) => {
+  // const { inputName, value, type, handleInputField, label, error } = props;
+  return (
+    <div>
+      <label htmlFor={inputName}>{label}</label>
+      <input
+        value={value}
+        type={type}
+        className="form-control"
+        id={inputName}
+        name={inputName}
+        //ref={this.username}
+        onChange={handleInputField}
+      />
+      {error && <p className="text-danger small">{error} *</p>}
+    </div>
+  );
+};
+
+export default Input;
+**************INPUT********************
+
+
+

@@ -1,0 +1,84 @@
+Microsoft Windows [Version 10.0.18362.720]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Program Files\MongoDB\Server\4.2\bin>mongo
+MongoDB shell version v4.2.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("de86a76a-f39d-42e6-adb4-88f6b4d24426") }
+MongoDB server version: 4.2.3
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+        http://docs.mongodb.org/
+Questions? Try the support group
+        http://groups.google.com/group/mongodb-user
+Server has startup warnings:
+2020-03-16T16:11:34.375+0530 I  CONTROL  [initandlisten]
+2020-03-16T16:11:34.375+0530 I  CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2020-03-16T16:11:34.375+0530 I  CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2020-03-16T16:11:34.375+0530 I  CONTROL  [initandlisten]
+---
+Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+and anyone you share the URL with. MongoDB may use this information to make product
+improvements and to suggest MongoDB products and deployment options to you.
+
+To enable free monitoring, run the following command: db.enableFreeMonitoring()
+To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use cts
+switched to db cts
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use text
+switched to db text
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> db.dropDatabase()
+{ "ok" : 1 }
+> use cts
+switched to db cts
+> db.dropDatabase()
+{ "ok" : 1 }
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> db
+cts
+> show collections
+> db.createCollection("employees");
+{ "ok" : 1 }
+> show collections
+employees
+> db.employees.renameCollection("emps")
+{ "ok" : 1 }
+> show collection
+2020-03-16T17:01:21.704+0530 E  QUERY    [js] uncaught exception: Error: don't know how to show [collection] :
+shellHelper.show@src/mongo/shell/utils.js:1139:11
+shellHelper@src/mongo/shell/utils.js:790:15
+@(shellhelp2):1:1
+> show collections
+emps
+> db.emps.drop()
+true
+> show collections
+> db.createCollection("employee")
+{ "ok" : 1 }
+> db.employee.find()
+> db.employee.insertOne({}){
+... db.createCollection("employee")cd..
+...
+... >db.employee.find()
+...
